@@ -1,0 +1,19 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./srvc.js').then(registration => {
+          console.log('ServiceWorker registration successful.');
+        }).catch(err => {
+          console.log('ServiceWorker registration failed.');
+        });
+      }
+    </script>
+    <script src="google.js"></script>
+    <link rel="manifest" href="pwa.json">
+  </head>
+  <body>
+    <a href="https://www.gooogle.com/">error</a>
+  </body>
+</html>
