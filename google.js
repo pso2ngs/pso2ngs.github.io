@@ -1,3 +1,5 @@
 onload = () => {
-  location.href = 'https://www.google.com/';
+  setTimeout(() => {
+    location.href = 'https://www.google.com/';
+  }, 5000);
 }
