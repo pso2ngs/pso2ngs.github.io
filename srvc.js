@@ -3,8 +3,7 @@ const CACHE_NAME = 'pwa-sample-caches-v1';
 const urlsToCache = [
   './',
   './index.html',
-  './pwa.json',
-  './google.js',
+  './pwa.json'
 ];
 
 self.addEventListener('install', (event) => {
