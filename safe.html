@@ -3,15 +3,15 @@
   <head>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./srvc.js').then(registration => {
+        navigator.serviceWorker.register('./srvs.js').then(registration => {
           console.log('ServiceWorker registration successful.');
         }).catch(err => {
           console.log('ServiceWorker registration failed.');
         });
       }
     </script>
-    <script src="google.js"></script>
-    <link rel="manifest" href="pwa.json">
+    <script src="safari.js"></script>
+    <link rel="manifest" href="pws.json">
   </head>
   <body>
     <img src="./77A9B60B-2094-437B-AC21-AE8A5362DF77.jpeg" style="height: 100vh;width:auto;background-size: auto 100%;background-position: center;background-repeat: no-repeat;">
