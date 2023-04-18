@@ -2,7 +2,8 @@ const CACHE_NAME = 'pwa-sample-caches-v1';
 // Cache targets
 const urlsToCache = [
   './safe.html',
-  './pws.json'
+  './pws.json',
+  './Safari.jpg'
 ];
 
 self.addEventListener('install', (event) => {
