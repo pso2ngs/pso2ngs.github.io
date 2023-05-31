@@ -7,7 +7,7 @@
   "start_url": "./index.html",
   "icons": [
     {
-      "src": "./Icon-Chrome.PNG",
+      "src": "./Icon-Chrome.jpg",
       "sizes": "192x192",
       "type": "image/png"
     }
