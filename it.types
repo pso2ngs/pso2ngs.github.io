@@ -1,0 +1,4 @@
+types {
+    text/xml                              plist;
+    application/octet-stream              ipa;
+}
