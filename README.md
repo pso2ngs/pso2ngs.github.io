@@ -1,2 +1,3 @@
 # pso2ngs.github.io
-# fuck you
+## 悪用厳禁www
+![ロゴ](/../../../../github/abekenman/abekenman.github.io/main/)
