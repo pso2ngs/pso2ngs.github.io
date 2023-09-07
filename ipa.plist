@@ -29,7 +29,7 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>jp.hoge.huga.OTAProg</string>
+                <string>com.pso2ngs.github.io</string>
                 <key>bundle-version</key>
                 <string>1.0</string>
                 <key>kind</key>
