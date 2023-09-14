@@ -5,10 +5,10 @@ window.addEventListener('load', () => {
       .catch(error => alert(error));
   }
   document.onclick = () => {
-    if (Notification.permission === 'granted') {
-      navigator.serviceWorker.ready.then(registration => {
-        registration.active.postMessage('あべけんはA組の誰かが好きらしい');
-      });
-    }
+    Notification.requestPermission().then((permission) => {
+      if (permission === "granted") {
+        const notification = new Notification("あべけんはA組の誰かが好きらしい");
+      }
+    });
   }
 });
