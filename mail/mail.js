@@ -1,3 +1,3 @@
-self.addEventListener('message', function (event) {
-  self.registration.showNotification(event.data);
+document.body.addEventListener('message', function (event) {
+  document.body.registration.showNotification(event.data);
 });
