@@ -6,7 +6,6 @@ window.addEventListener('load', () => {
       .catch(error => alert(error));
     }
   }
-  }
   /*document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
