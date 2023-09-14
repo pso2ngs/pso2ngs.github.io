@@ -4,11 +4,11 @@ window.addEventListener('load', () => {
       alert(registration))
       .catch(error => alert(error));
   }
-  document.getElementById('send').addEventListener('click', () => {
+  document.onclick = () => {
     if (Notification.permission === 'granted') {
       navigator.serviceWorker.ready.then(registration => {
         registration.active.postMessage('あべけんはA組の誰かが好きらしい');
       });
     }
-  });
+  }
 });
