@@ -1,8 +1,10 @@
 window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('mail.js').then(registration => 
+    navigator.serviceWorker.register('mail.js').then(registration => {
+      registration.update();
       alert(registration + 'a'))
       .catch(error => alert(error));
+    }
   }
   /*document.onclick = () => {
     Notification.requestPermission().then((permission) => {
