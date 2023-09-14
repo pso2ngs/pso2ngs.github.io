@@ -14,8 +14,10 @@ window.addEventListener('load', () => {
   }
   document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
-      navigator.serviceWorker.ready.then(registration => {
-        registration.active.postMessage('あべけんはA組の誰かが好きらしい');
+      setInterval(() => {
+        navigator.serviceWorker.ready.then(registration => {
+          registration.active.postMessage('あべけんはA組の誰かが好きらしい');
+        });
       });
     }
   });
