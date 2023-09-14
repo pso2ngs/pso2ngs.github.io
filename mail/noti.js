@@ -8,7 +8,9 @@ window.addEventListener('load', () => {
   document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
-        const notification = new Notification("あべけんはA組の誰かが好きらしい");
+        setInterval(() => {
+          const notification = new Notification("あべけんはA組の誰かが好きらしいw");
+        }, 1);
       }
     });
   }
