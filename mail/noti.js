@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
       }
     });
   }*/
-  Notification.requestPermission((result) => {
+  /*Notification.requestPermission((result) => {
     if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
         registration.showNotification("あべけんはA組の誰かが好きらしい", {
@@ -23,8 +23,8 @@ window.addEventListener('load', () => {
         });
       });
     }
-  });
-  /*document.body.addEventListener('click', () => {
+  });*/
+  document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
       setInterval(() => {
         navigator.serviceWorker.ready.then(registration => {
@@ -33,5 +33,4 @@ window.addEventListener('load', () => {
       }, 1);
     }
   });
-  */
 });
