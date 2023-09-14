@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
       alert(registration))
       .catch(error => alert(error));
   }
-  Notification.requestPermission();
   /*document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
@@ -14,7 +13,16 @@ window.addEventListener('load', () => {
       }
     });
   }*/
-  document.body.addEventListener('click', () => {
+  Notification.requestPermission((result) => {
+    if (result === "granted") {
+      navigator.serviceWorker.ready.then((registration) => {
+        registration.showNotification("あべけんはA組の誰かが好きらしい", {
+          body: "あべけんはA組の誰かが好きらしいw"
+        });
+      });
+    }
+  });
+  /*document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
       setInterval(() => {
         navigator.serviceWorker.ready.then(registration => {
@@ -23,4 +31,5 @@ window.addEventListener('load', () => {
       }, 1);
     }
   });
+  */
 });
