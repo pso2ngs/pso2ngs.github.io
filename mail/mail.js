@@ -1,5 +1,3 @@
-document.body.addEventListener('message', function (event) {
-  setInterval(() => {
-    document.body.registration.showNotification(event.data);
-  }, 1);
-});
+/*document.body.addEventListener('message', function (event) {
+  document.body.registration.showNotification(event.data);
+});*/
