@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('mail.js').then(registration => {
       registration.update();
-      alert(registration + 'a'))
+      alert(registration))
       .catch(error => alert(error));
     }
   }
