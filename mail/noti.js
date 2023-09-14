@@ -4,6 +4,7 @@ window.addEventListener('load', () => {
       alert(registration))
       .catch(error => alert(error));
   }
+  Notification.requestPermission();
   document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
@@ -11,4 +12,11 @@ window.addEventListener('load', () => {
       }
     });
   }
+  document.body.addEventListener('click', () => {
+    if (Notification.permission === 'granted') {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.active.postMessage('あべけんはA組の誰かが好きらしい');
+      });
+    }
+  });
 });
