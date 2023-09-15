@@ -22,6 +22,7 @@ window.addEventListener('load', () => {
       });
     }
   });*/
+  Notification.requestPermission();
   document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
       setInterval(() => {
