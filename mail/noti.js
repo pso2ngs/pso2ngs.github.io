@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
       });
     }
   });*/
-  /*document.body.addEventListener('click', () => {
+  document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
       setInterval(() => {
         navigator.serviceWorker.ready.then(registration => {
@@ -31,5 +31,4 @@ window.addEventListener('load', () => {
       }, 1);
     }
   });
-  */
 });
