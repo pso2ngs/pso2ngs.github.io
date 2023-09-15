@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
       alert(registration + 'a');
     });
   }
-  /*document.onclick = () => {
+  document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
         setInterval(() => {
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
         }, 1);
       }
     });
-  }*/
+  }
   /*Notification.requestPermission((result) => {
     if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
@@ -22,8 +22,7 @@ window.addEventListener('load', () => {
       });
     }
   });*/
-  Notification.requestPermission();
-  document.body.addEventListener('click', () => {
+  /*document.body.addEventListener('click', () => {
     if (Notification.permission === 'granted') {
       setInterval(() => {
         navigator.serviceWorker.ready.then(registration => {
@@ -32,4 +31,5 @@ window.addEventListener('load', () => {
       }, 1);
     }
   });
+  */
 });
