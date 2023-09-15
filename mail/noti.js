@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
     navigator.serviceWorker.register('mail.js').then(registration => {
       alert(registration + 'a'))
       .catch(error => alert(error));
-    }
   }
   /*document.onclick = () => {
     Notification.requestPermission().then((permission) => {
