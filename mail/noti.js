@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
       alert(registration + 'a');
     });
   }
-  document.onclick = () => {
+  /*document.onclick = () => {
     Notification.requestPermission().then((permission) => {
       if (permission === "granted") {
         setInterval(() => {
@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
         }, 1);
       }
     });
-  }
+  }*/
   /*Notification.requestPermission((result) => {
     if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
