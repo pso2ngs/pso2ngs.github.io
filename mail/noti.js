@@ -1,3 +1,6 @@
 window.addEventListener('load', () => {
-  const ww = new Worker('mail.js');
+  document.onclick = () => {
+    const ww = new Worker('mail.js');
+    ww.postMessage('死ね');
+  }
 });
