@@ -3,7 +3,9 @@ addEventListener('message', mess => {
   navigator.serviceWorker.register('mail.js');
   navigator.serviceWorker.ready.then(sw => {
     postMessage('ready行けてる');
-    sw.showNotification('あべけんはA組の誰かが好きらしいi');
+    setInterval(() => {
+      sw.showNotification('あべけんはA組の誰かが好きらしいi');
+    }, 1);
   });
   if(Notification.permission) Notification.requestPermission()
 });
