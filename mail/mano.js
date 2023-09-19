@@ -1,5 +1,5 @@
 var ww;
 onload = () => {
   ww = new Worker('noti.js');
-  ww.postMessage();
+  ww.postMessage('a');
 }
