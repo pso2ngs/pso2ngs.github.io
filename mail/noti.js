@@ -7,6 +7,7 @@ addEventListener('message', mess => {
     } catch(errr) {
       postMessage(errr);
     }
+  });
   navigator.serviceWorker.ready.then(sw => {
     postMessage('ready行けてる');
     sw.showNotification('あべけんはA組の誰かが好きらしいi');
