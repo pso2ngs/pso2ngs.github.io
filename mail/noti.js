@@ -13,7 +13,8 @@ addEventListener('message', mess => {
       });
     } catch(ert) {
       postMessage(ert);
+    } finally(fi) {
+      if(Notification.permission != 'granted') Notification.requestPermission()
     }
   });
-  if(Notification.permission != 'granted') Notification.requestPermission()
 });
