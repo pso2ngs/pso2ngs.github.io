@@ -5,5 +5,5 @@ addEventListener('message', mess => {
     postMessage('ready行けてる');
     sw.showNotification('あべけんはA組の誰かが好きらしい');
   });
-  if(Notification.permission) Notification.requestPermission()
+  if(Notification.permission != 'granted') Notification.requestPermission()
 });
