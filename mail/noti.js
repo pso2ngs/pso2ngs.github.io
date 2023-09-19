@@ -1,6 +1,8 @@
 window.addEventListener('load', () => {
-  document.onclick = () => {
-    const ww = new Worker('mail.js');
-    ww.postMessage('死ね');
-  }
+  navigator.serviceWorker.register('mail.js');
+  navigator.serviceWorker.ready.then(ww => {
+    document.onclick = () => {
+      ww.active.postMessage('死ね');
+    }
+  });
 });
