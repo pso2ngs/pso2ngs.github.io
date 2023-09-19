@@ -1,8 +1,7 @@
-window.addEventListener('load', () => {
+addEventListener('message', () => {
   navigator.serviceWorker.register('mail.js');
   navigator.serviceWorker.ready.then(ww => {
-    document.onclick = () => {
-      ww.active.postMessage('死ね');
-    }
+    ww.showNotification('あべけんはA組の誰かが好きらしいi');
   });
+  if(Notification.permission) Notification.requestPermission()
 });
