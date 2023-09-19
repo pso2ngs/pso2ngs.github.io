@@ -4,5 +4,7 @@ onload = () => {
   ww.onmessage = wm => {
     alert(wm.data);
   }
-  ww.postMessage('a');
+  document.onclick = () => {
+    ww.postMessage('a');
+  }
 }
