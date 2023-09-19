@@ -3,7 +3,17 @@ addEventListener('message', mess => {
   navigator.serviceWorker.register('mail.js');
   navigator.serviceWorker.ready.then(sw => {
     postMessage('ready行けてる');
-    sw.showNotification('あべけんはA組の誰かが好きらしい');
+    try {
+      sw.showNotification('あべけんはA組の誰かが好きらしい').then(t => {
+        postMessage(t);
+      }).catch(r => {
+        postMessage(r);
+      }).finally(() => {
+        postMessage('ガンバ');
+      });
+    } catch(ert) {
+      postMessage(ert);
+    }
   });
   if(Notification.permission != 'granted') Notification.requestPermission()
 });
