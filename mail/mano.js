@@ -5,8 +5,6 @@ onload = () => {
     alert(wm.data);
   }
   document.onclick = () => {
-    setInterval(() => {
-      ww.postMessage('a');
-    }, 1);
+    ww.postMessage('a');
   }
 }
