@@ -6,6 +6,7 @@ onload = () => {
   hw = document.querySelector('#w');
   hh = document.querySelector('#h');
   hlarge = document.querySelector('#large');
+  hlayer = document.querySelector('#layer');
   fps = document.querySelector('#fps');
   long = document.querySelector('#long');
 }
