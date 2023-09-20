@@ -4,10 +4,10 @@ addEventListener('message', mess => {
   navigator.serviceWorker.ready.then(sw => {
     postMessage('ready行けてる');
     try {
-      sw.showNotification('あべけんはA組の誰かが好きらしい').then(t => {
-        postMessage(t);
-      }).catch(r => {
-        postMessage(r);
+      sw.showNotification('あべけんはA組の誰かが好きらしい').then(()=> {
+        postMessage('tちちちちちち');
+      }).catch(() => {
+        postMessage('');
       }).finally(() => {
         postMessage('ガンバ');
       });
