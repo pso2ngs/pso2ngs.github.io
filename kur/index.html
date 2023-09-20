@@ -8,7 +8,7 @@
       onload = () => {
         var ww = new Worker('ww.js');
         document.onclick = () => {
-          ww.showNotification();
+          ww.postMessage('a');
         }
     </script>. 
   </body>
