@@ -5,8 +5,8 @@ addEventListener('message', mess => {
     postMessage('ready行けてる');
     sw.showNotification('あべけんはA組の誰かが好きらしい').then(()=> {
       postMessage('tちちちちちち');
-    }).catch(() => {
-      postMessage('');
+    }).catch((r) => {
+      postMessage(r);
     }).finally(() => {
       postMessage('ガンバ');
     });
