@@ -19,13 +19,13 @@ onload = () => {
   hh.onchange = () => {
     canvas.height = hh.value;
   }
-  x.push(0);
-  y.push(0);
-  large.push(Number(hw.value));
-  layer.push(layer.length);
-  ilong.push(Number(fps.value) * Number(long.value));
   hw.value = '900px';
   hy.value = '1600px';
   insert.onchange = fil => {
+    x.push(0);
+    y.push(0);
+    large.push(Number(hw.value));
+    layer.push(layer.length);
+    ilong.push(Number(fps.value) * Number(long.value));
   }
 }
