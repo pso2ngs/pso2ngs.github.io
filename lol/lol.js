@@ -1,4 +1,4 @@
-var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, x, y, large, fps, long, layer, ilong, start, insert;
+var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb;
 onload = () => {
   x = y = w = h = large = layer = ilong = start = [];
   canvas = document.querySelector('canvas');
@@ -10,9 +10,10 @@ onload = () => {
   hlayer = document.querySelector('#layer');
   hilong = document.querySelector('#ilong');
   hstart = document.querySelector('#start');
-  fps = document.querySelector('#fps');
-  long = document.querySelector('#long');
-  insert = document.querySelector('#insert');
+  hfps = document.querySelector('#fps');
+  hlong = document.querySelector('#long');
+  hinsert = document.querySelector('#insert');
+  hpb = document.querySelector('#pb');
   hw.onchange = () => {
     canvas.width = hw.value;
   }
@@ -21,11 +22,14 @@ onload = () => {
   }
   hw.value = '900px';
   hy.value = '1600px';
-  insert.onchange = fil => {
+  hfps.value = 40;
+  hlong.value = 10;
+  hpb.value = Number(hlong.value) * Number(hfps.value);
+  hinsert.onchange = fil => {
     x.push(0);
     y.push(0);
     large.push(Number(hw.value));
     layer.push(layer.length);
-    ilong.push(Number(fps.value) * Number(long.value));
+    ilong.push(Number(hfps.value) * Number(hlong.value));
   }
 }
