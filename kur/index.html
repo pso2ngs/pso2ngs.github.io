@@ -6,7 +6,9 @@
     <script>
       function fuck() {
         alert(Notification.permission);
-        const nota = new Notification('hyy');
+        Notification.requestPermission(note => {
+          const nota = new Notification('hyy');
+        }
       }
     </script>
     <button onclick="fuck()">soa</button>
