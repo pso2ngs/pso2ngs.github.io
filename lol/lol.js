@@ -15,13 +15,13 @@ onload = () => {
   hinsert = document.querySelector('#insert');
   hpb = document.querySelector('#pb');
   hw.onchange = () => {
-    canvas.width = hw.value;
+    canvas.width = hw.value + 'px';
   }
   hh.onchange = () => {
-    canvas.height = hh.value;
+    canvas.height = hh.value + 'px';
   }
   hw.value = '900px';
-  hy.value = '1600px';
+  hy.value = 1600;
   hfps.value = 40;
   hlong.value = 10;
   hpb.value = Number(hlong.value) * Number(hfps.value);
