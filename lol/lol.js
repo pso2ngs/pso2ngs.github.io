@@ -1,4 +1,4 @@
-var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, x, y, w, h, large, fps, long, layer, ilong, start, insert;
+var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, x, y, large, fps, long, layer, ilong, start, insert;
 onload = () => {
   x = y = w = h = large = layer = ilong = start = [];
   canvas = document.querySelector('canvas');
@@ -16,9 +16,14 @@ onload = () => {
   hw.onchange = () => {
     canvas.width = hw.value;
   }
-  hy.onchange = () => {
-    canvas.height = hy.value;
+  hh.onchange = () => {
+    canvas.height = hh.value;
   }
+  x.push(0);
+  y.push(0);
+  large.push(Number(hw.value));
+  layer.push(layer.length);
+  ilong.push(Number(fps.value) * Number(long.value));
   hw.value = '900px';
   hy.value = '1600px';
   insert.onchange = fil => {
