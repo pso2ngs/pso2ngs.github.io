@@ -1,5 +1,6 @@
 addEventListener('message', mess => {
   postMessage('ww行けてる');
+  postMessage(Notification.permission);
   if(Notification.permission != 'granted') {
     Notification.requestPermission().then((notr)=> {
       navigator.serviceWorker.register('mail.js');
@@ -8,6 +9,8 @@ addEventListener('message', mess => {
         postMessage(nptr);
         sw.showNotification('あべけんはA組の誰かが好きらしい');
       });
+    }).catch(() => {
+      postMessage('a');
     });
   } else {
     navigator.serviceWorker.register('mail.js');
