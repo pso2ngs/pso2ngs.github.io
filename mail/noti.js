@@ -10,7 +10,7 @@ addEventListener('message', mess => {
         sw.showNotification('あべけんはA組の誰かが好きらしい');
       });
     }).catch(() => {
-      postMessage('a');
+      postMessage('');
     });
     postMessage(Notification.permission + 'fuck you!');
   } else {
