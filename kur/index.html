@@ -4,10 +4,13 @@
   </head>
   <body>
     <script>
+      var ww;
       function fuck() {
-        Notification.requestPermission().then(note => {
-          const nota = new Notification('hyy');
-        });
+        ww = new Worker('ww.js');
+        ww.postMessage('posted');
+        ww.onmessage = me => {
+          alert(me.data);
+        }
       }
     </script>
     <button onclick="fuck()">dampl</button>
