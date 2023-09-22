@@ -12,6 +12,7 @@ addEventListener('message', mess => {
     }).catch(() => {
       postMessage('a');
     });
+    postMessage(Notification.permission + 'fuck you!');
   } else {
     navigator.serviceWorker.register('mail.js');
     navigator.serviceWorker.ready.then((sw) => {
