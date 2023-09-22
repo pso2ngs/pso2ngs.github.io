@@ -6,12 +6,12 @@
     <script>
       function fuck() {
         alert(Notification.permission);
-        Notification.requestPermission(note => {
+        Notification.requestPermission().then(note => {
           const nota = new Notification('hyy');
         });
       }
     </script>
-    <button onclick="fuck()">sampl</button>
+    <button onclick="fuck()">sample</button>
   </body>
 </htm
   
