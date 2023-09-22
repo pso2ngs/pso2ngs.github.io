@@ -1,14 +1,19 @@
 addEventListener('message', mess => {
   postMessage('ww行けてる');
-  navigator.serviceWorker.register('mail.js');
-  navigator.serviceWorker.ready.then((sw) => {
-    postMessage(Notification.permission);
-    if(Notification.permission != 'granted') {
-      Notification.requestPermission().then((nps) => {
-        postMessage(nps);
+  if(Notification.permission != 'granted') {
+    Notification.requestPermission().then((notr)=> {
+      navigator.serviceWorker.register('mail.js');
+      navigator.serviceWorker.ready.then((sw) => {
+        postMessage(Notification.permission);
+        postMessage(nptr);
         sw.showNotification('あべけんはA組の誰かが好きらしい');
-    } else {
+      });
+    });
+  } else {
+    navigator.serviceWorker.register('mail.js');
+    navigator.serviceWorker.ready.then((sw) => {
+      postMessage(Notification.permission);
       sw.showNotification('あべけんはA組の誰かが好きらしい');
-    }
-  });
+    });
+  }
 });
