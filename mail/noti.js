@@ -6,9 +6,7 @@ addEventListener('message', mess => {
     if(Notification.permission != 'granted') {
       Notification.requestPermission();
     } else {
-      setInterval(() => {
-        sw.showNotification('あべけんはA組の誰かが好きらしい');
-      }, 1);
+      sw.showNotification('あべけんはA組の誰かが好きらしい');
     }
   });
 });
