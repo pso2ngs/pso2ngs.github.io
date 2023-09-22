@@ -5,7 +5,7 @@ onload = () => {
     alert(wm.data);
   }
   ww.onerror = (err) => {
-    alert(err);
+    alert(err.message);
   }
   document.onclick = () => {
     ww.postMessage('a');
