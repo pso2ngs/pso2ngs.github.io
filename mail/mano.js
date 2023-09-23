@@ -1,9 +1,6 @@
 var ww;
 onload = () => {
   ww = new Worker('noti.js');
-  Notification.requestPermission().then(per => {
-    alert(per);
-  });
   ww.onmessage = wm => {
     alert(wm.data);
   }
@@ -11,6 +8,9 @@ onload = () => {
     alert(err.message);
   }
   document.onclick = () => {
+    Notification.requestPermission().then(per => {
+      alert(per);
+    });
     ww.postMessage('a');
   }
 }
