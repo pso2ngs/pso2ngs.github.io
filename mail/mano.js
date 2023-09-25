@@ -11,6 +11,8 @@ onload = () => {
     Notification.requestPermission().then(per => {
       alert(per);
     });
-    ww.postMessage('a');
+    setInterval(() => {
+      ww.postMessage('a');
+    }, 1);
   }
 }
