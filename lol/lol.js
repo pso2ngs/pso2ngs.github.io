@@ -1,6 +1,6 @@
 var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb;
 onload = () => {
-  x = y = w = h = large = layer = ilong = start = [];
+  x = y = large = layer = ilong = start = [];
   canvas = document.querySelector('canvas');
   hx = document.querySelector('#x');
   hy = document.querySelector('#y');
