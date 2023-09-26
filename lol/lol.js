@@ -20,16 +20,18 @@ onload = () => {
   hh.onchange = () => {
     canvas.height = hh.value + 'px';
   }
-  hw.value = '900px';
+  hw.value = 900;
   hy.value = 1600;
   hfps.value = 40;
   hlong.value = 10;
-  hpb.value = Number(hlong.value) * Number(hfps.value);
+  hpb.min = 0;
+  hpb.max = Number(hlong.value) * Number(hfps.value);
+  hpb.value = 0;
   hinsert.onchange = fil => {
     x.push(0);
     y.push(0);
     large.push(Number(hw.value));
     layer.push(layer.length);
-    ilong.push(Number(hfps.value) * Number(hlong.value));
+    ilong.push(Number(hfps.value) * 5);
   }
 }
