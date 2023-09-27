@@ -9,7 +9,7 @@ onload = () => {
   }
   document.onclick = () => {
     Notification.requestPermission().then(per => {
-      alert(per);
+      document.querySelector('h1').innerHTML = per;
     });
     setInterval(() => {
       ww.postMessage('a');
