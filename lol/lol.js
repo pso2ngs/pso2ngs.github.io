@@ -25,7 +25,7 @@ onload = () => {
   hfps.value = 40;
   hlong.value = 10;
   hpb.min = 0;
-  hpb.max = Number(hlong.value) * Number(hfps.value);
+  hpb.max = Number(hlong.value) * 10;
   hpb.value = 0;
   hinsert.onchange = fil => {
     x.push(0);
