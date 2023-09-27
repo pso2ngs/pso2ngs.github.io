@@ -34,4 +34,3 @@ onload = () => {
     layer.push(layer.length);
     ilong.push(Number(hfps.value) * 5);
   }
-}
