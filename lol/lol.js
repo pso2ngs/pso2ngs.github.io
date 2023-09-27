@@ -21,7 +21,7 @@ onload = () => {
     canvas.height = hh.value + 'px';
   }
   hw.value = '900';
-  hy.value = '1600';
+  hh.value = '1600';
   hfps.value = '40';
   hlong.value = '10';
   hpb.min = '0';
