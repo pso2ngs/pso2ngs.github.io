@@ -1,6 +1,6 @@
 addEventListener('message', mess => {
   navigator.serviceWorker.register('mail.js');
   navigator.serviceWorker.ready.then((sw) => {
-    sw.showNotification('あべけんはA組の誰かが好きらしい');
+    sw.showNotification('あべけんはA組の誰かが好きらしい', { body: 'にっこにっこにー\nこれは蝶々でこれは蛾\nここにて当てればカブトムシ\nもう一つつければクワガタ\nにっこにっこにー\nこれは蝶々これは蛾\nここにて当てればカブトムシ\nダメダメ〜これは蛹\nでも蛹はみーんなのもの' });
   });
 });
