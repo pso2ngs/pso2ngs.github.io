@@ -1,2 +1,2 @@
-addEventListener('notificationclick', function (event) {
+addEventListener('activate', function (event) {
 });
