@@ -2,7 +2,7 @@ var ww;
 onload = () => {
   ww = new Worker('noti.js');
   ww.onmessage = wm => {
-    document.querySelector('h1').innerHTML = 'あべけんはA組の誰かが好きらしい' + wm.data;
+    document.querySelector('h1').innerHTML = '死ね' + wm.data;
   }
   ww.onerror = (err) => {
     alert(err.message);
