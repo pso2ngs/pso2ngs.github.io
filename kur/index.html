@@ -7,13 +7,15 @@
       var ww;
       function fuck() {
         ww = new Worker('ww.js');
-        ww.postMessage('posted');
+        Notification.requestPermission().then(n => {
+          ww.postMessage('posted');
+        });
         ww.onmessage = me => {
           alert(me.data);
         }
       }
     </script>
-    <button onclick="fuck()">solved</button>
+    <button>solved</button>
   </body>
 </htm
   
