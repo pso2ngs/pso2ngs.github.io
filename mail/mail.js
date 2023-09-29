@@ -1,2 +1,2 @@
-addEventListener('activate', function (event) {
+addEventListener('message', function (event) {
 });
