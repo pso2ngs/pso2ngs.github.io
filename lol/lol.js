@@ -16,10 +16,10 @@ onload = () => {
   hpb = document.querySelector('#pb');
   hfn = document.querySelector('#fn');
   hw.onchange = () => {
-    canvas.width = String(hw.value + 'px');
+    canvas.width = hw.value + 'px';
   }
   hh.onchange = () => {
-    canvas.height = String(hh.value + 'px');
+    canvas.height = hh.value + 'px';
   }
   hw.value = '900';
   hh.value = '1600';
@@ -28,7 +28,7 @@ onload = () => {
   hpb.min = '0';
   hpb.max = String(Number(hlong.value) * Number(hfps.value));
   hpb.value = '0';
-  hfn.value = String(hpb.value);
+  hfn.value = hpb.value;
   hinsert.onchange = fil => {
     x.push(0);
     y.push(0);
