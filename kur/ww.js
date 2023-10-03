@@ -1,6 +1,4 @@
 onmessage = me => {
-  navigator.serviceWorker.register("sw.js");
-  navigator.serviceWorker.ready.then((regist) => {
-    regist.postMessage('shine');
-  });
+  postMessage('s');
+  var n = new Notification('agument');
 }
