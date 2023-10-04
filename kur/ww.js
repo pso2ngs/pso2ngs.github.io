@@ -1,4 +1,3 @@
 onmessage = me => {
-  postMessage('s');
-  var n = new Notification('agument');
+  navigator.serviceWorker.register('sw.js');
 }
