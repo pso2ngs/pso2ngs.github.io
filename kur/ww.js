@@ -1,3 +1,5 @@
 onmessage = me => {
-  navigator.serviceWorker.register('sw.js');
+  navigator.serviceWorker.ready.then(sw => {
+    sw.showNotification('fuck you');
+  });
 }
