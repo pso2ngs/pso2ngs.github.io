@@ -8,6 +8,7 @@
       document.onclick = () => {
         ww = new Worker('ww.js');
         Notification.requestPermission().then(n => {
+          navigator.serviceWorker.register('sw.js'); 
           ww.postMessage('posted');
         });
         ww.onmessage = me => {
