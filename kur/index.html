@@ -11,6 +11,8 @@
           navigator.serviceWorker.register('sw.js'); 
           ww.postMessage('posted');
         });
+        ww.onerror = er => {
+          alert(er.message);
         ww.onmessage = me => {
           ww.postMessage('successed');
         }
