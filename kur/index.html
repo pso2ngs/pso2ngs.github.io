@@ -12,7 +12,7 @@
           ww.postMessage('posted');
         });
         ww.onerror = er => {
-          alert(er.message);
+          alert('a');
         }
         ww.onmessage = me => {
           ww.postMessage('successed');
