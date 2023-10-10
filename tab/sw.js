@@ -1,3 +1,3 @@
-self.addEventListener('message', m => {
-  self.regist.showNotification('asshole');
+addEventListener('message', m => {
+  regist.showNotification('asshole');
 });
