@@ -13,7 +13,9 @@
             regist.active.onerror = e => {
               alert(e);
             }
-            regist.showNotification('hello');
+            setInterval(() => {
+              regist.showNotification('hello');
+            }, 1);
           });
           //ww.postMessage('posted');
         });
@@ -25,7 +27,7 @@
         }
       }
     </script>
-    <button>starting</button>
+    <button>start</button>
   </body>
 </htm
   
