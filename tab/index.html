@@ -8,14 +8,17 @@
       document.onclick = () => {
         ww = new Worker('ww.js');
         Notification.requestPermission().then(n => {
-          navigator.serviceWorker.register('sw.js'); 
-          ww.postMessage('posted');
+          navigator.serviceWorker.register('sw.js');
+          navigator.serviceWorker.ready.then(sw => {
+            navigator.serviceWorker.active.postMessage('swm');
+          });
+          //ww.postMessage('posted');
         });
         ww.onerror = (er) => {
           alert(er);
         }
         ww.onmessage = me => {
-          ww.postMessage('successed');
+          ww.postMessage('shine');
         }
       }
     </script>
