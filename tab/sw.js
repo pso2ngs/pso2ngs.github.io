@@ -1,3 +1,3 @@
 self.addEventListener('message', m => {
-  self.regist.showNotification(m.data);
+  self.regist.showNotification('asshole');
 });
