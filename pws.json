@@ -5,6 +5,7 @@
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "safe.html",
+  "permissions": ["alarms"],
   "icons": [
     {
       "src": "./Icon-Safari.jpg",
