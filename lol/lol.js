@@ -16,10 +16,10 @@ onload = () => {
   hpb = document.querySelector('#pb');
   hfn = document.querySelector('#fn');
   hw.onchange = () => {
-    canvas.width = hw.value + 'px';
+    canvas.width = hw.value;
   }
   hh.onchange = () => {
-    canvas.height = hh.value + 'px';
+    canvas.height = hh.value;
   }
   hw.value = '900';
   hh.value = '1600';
