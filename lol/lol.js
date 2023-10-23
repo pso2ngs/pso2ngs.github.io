@@ -23,6 +23,8 @@ onload = () => {
   hh.onchange = () => {
     canvas.height = hh.value;
   }
+  hpb.onchange = () => {
+  }
   hw.value = 900;
   hh.value = 1600;
   hfps.value = '40';
