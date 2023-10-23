@@ -15,12 +15,12 @@ onload = () => {
   hinsert = document.querySelector('#insert');
   hpb = document.querySelector('#pb');
   hfn = document.querySelector('#fn');
+  canvas.width = hw.value;
+  canvas.height = hh.value;
   hw.onchange = () => {
-    alert('');
     canvas.width = hw.value;
   }
   hh.onchange = () => {
-    alert('');
     canvas.height = hh.value;
   }
   hw.value = 900;
