@@ -16,9 +16,11 @@ onload = () => {
   hpb = document.querySelector('#pb');
   hfn = document.querySelector('#fn');
   hw.onchange = () => {
+    alert('');
     canvas.width = hw.value;
   }
   hh.onchange = () => {
+    alert('');
     canvas.height = hh.value;
   }
   hw.value = 900;
