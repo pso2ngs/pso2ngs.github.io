@@ -32,9 +32,12 @@ onload = () => {
   }
   hsta.onclick = () => {
     s = setInterval(() => {
-      if(hpb.value == hpb.max) dese()
-      hpb.value = Number(hpb.value) + 1;
-      hfn.value = Number(hfn.value) + 1;
+      if(hpb.value == hpb.max) {
+        dese();
+      } else {
+        hpb.value = Number(hpb.value) + 1;
+        hfn.value = Number(hfn.value) + 1;
+      }
     }, 1000 / hfps.value);
   }
   hw.value = 900;
