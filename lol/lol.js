@@ -33,6 +33,7 @@ onload = () => {
   hsta.onclick = () => {
     setInterval(() => {
       hpb.value = hpb.value + 1;
+      hfn.value = hfn.value + 1;
     }, 1 / hfps.value);
   }
   hw.value = 900;
