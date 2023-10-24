@@ -25,7 +25,10 @@ onload = () => {
     canvas.height = hh.value;
   }
   hpb.onchange = () => {
-    hfn.innerHTML = hpb.value;
+    hfn.value = hpb.value;
+  }
+  hfn.onchange = () => {
+    hpb.value = hfn.value;
   }
   hsta.onclick = () => {
     setInterval(() => {
