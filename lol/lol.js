@@ -34,7 +34,7 @@ onload = () => {
     setInterval(() => {
       hpb.value = hpb.value + 1;
       hfn.value = hfn.value + 1;
-    }, 1 / hfps.value);
+    }, 1000 / hfps.value);
   }
   hw.value = 900;
   hh.value = 1600;
