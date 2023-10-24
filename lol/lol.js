@@ -1,4 +1,4 @@
-var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, hfn, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb;
+var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, hfn, hsta, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb;
 onload = () => {
   x = y = large = layer = ilong = start = [];
   canvas = document.querySelector('canvas');
@@ -15,6 +15,7 @@ onload = () => {
   hinsert = document.querySelector('#insert');
   hpb = document.querySelector('#pb');
   hfn = document.querySelector('#fn');
+  hsta = document.querySelector('#sta');
   canvas.width = hw.value;
   canvas.height = hh.value;
   hw.onchange = () => {
@@ -26,19 +27,24 @@ onload = () => {
   hpb.onchange = () => {
     hfn.innerHTML = hpb.value;
   }
+  hsta.onclick = () => {
+    setInterval(() => {
+      hpb.value = hpb.value + 1;
+    }, 1 / hfps.value);
+  }
   hw.value = 900;
   hh.value = 1600;
-  hfps.value = '40';
-  hlong.value = '10';
-  hpb.min = '0';
-  hpb.max = String(Number(hlong.value) * Number(hfps.value));
-  hpb.value = '0';
+  hfps.value = 40;
+  hlong.value = 10;
+  hpb.min = 0;
+  hpb.max = hlong.value * hfps.value;
+  hpb.value = 0;
   hfn.value = hpb.value;
   hinsert.onchange = fil => {
     x.push(0);
     y.push(0);
-    large.push(Number(hw.value));
+    large.push(hw.value);
     layer.push(layer.length);
-    ilong.push(Number(hfps.value) * 5);
+    ilong.push(hfps.value * 5);
   }
 }
