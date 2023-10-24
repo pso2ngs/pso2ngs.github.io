@@ -31,7 +31,10 @@ onload = () => {
     hpb.value = hfn.value;
   }
   hsta.onclick = () => {
-    setInterval(() => {
+    function dese() {
+      clearInterval(s);
+    }
+    var s = setInterval(() => {
       hpb.value = Number(hpb.value) + 1;
       hfn.value = Number(hfn.value) + 1;
     }, 1000 / hfps.value);
