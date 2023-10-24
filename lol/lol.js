@@ -1,4 +1,4 @@
-var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, hfn, hsta, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb;
+var canvas, hx, hy, hw, hh, hlarge, hlayer, hilong, hstart, hpb, hfn, hsta, x, y, large, hfps, hlong, layer, ilong, start, hinsert, hpb, s;
 onload = () => {
   x = y = large = layer = ilong = start = [];
   canvas = document.querySelector('canvas');
@@ -31,12 +31,10 @@ onload = () => {
     hpb.value = hfn.value;
   }
   hsta.onclick = () => {
-    function dese() {
-      clearInterval(s);
-    }
-    var s = setInterval(() => {
+    s = setInterval(() => {
       hpb.value = Number(hpb.value) + 1;
       hfn.value = Number(hfn.value) + 1;
+      dese();
     }, 1000 / hfps.value);
   }
   hw.value = 900;
@@ -54,4 +52,7 @@ onload = () => {
     layer.push(layer.length);
     ilong.push(hfps.value * 5);
   }
+}
+function dese() {
+  clearInterval(s);
 }
