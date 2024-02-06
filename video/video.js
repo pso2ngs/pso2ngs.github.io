@@ -18,6 +18,7 @@ onload = () => {
             vid.hidden = false;
           }
         } else {
+          vid.pause();
         }
       }
     }
