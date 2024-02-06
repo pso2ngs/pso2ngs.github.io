@@ -15,7 +15,9 @@ onload = () => {
           if(!vid.hidden) {
             vid.hidden = true;
             vid.pause();
+            document.querySelector('img').hidden = false;
           } else {
+            document.querySelector('img').hidden = true;
             vid.hidden = false;
           }
         } else {
