@@ -14,11 +14,11 @@ onload = () => {
         if(!c.target.closest('video')) {
           if(!vid.hidden) {
             vid.hidden = true;
+            vid.pause();
           } else {
             vid.hidden = false;
           }
         } else {
-          vid.pause();
         }
       }
     }
